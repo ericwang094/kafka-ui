@@ -119,6 +119,9 @@ dependencies {
     testImplementation libs.okhttp3.mockwebserver
     testImplementation libs.wiremock
     testImplementation libs.prometheus.metrics.core
+
+    implementation "org.springframework.boot:spring-boot-starter-data-redis-reactive"
+    implementation "org.springframework.session:spring-session-data-redis"
 }
 
 generateGrammarSource {
