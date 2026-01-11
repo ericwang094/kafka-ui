@@ -1,0 +1,15 @@
+steps:
+  - name: ":docker: Publish Kafka UI Docker image"
+    key: "build-image"
+    agents:
+      queue: "rea-artifacts:build:arm64"
+    plugins:
+      - ssh://git@git.realestate.com.au/buildkite-plugin/ecr-release-buildkite-plugin#v1.5.1:
+          dockerfile-path: "Dockerfile"  # Put multi-stage Dockerfile at repo root
+          namespace: "data-platform"
+          repository: "kafka-ui"
+          tags: "$BUILDKITE_BUILD_NUMBER"
+          lifecycle_policy:
+            retain_tagged_image_count: 100
+          architectures:
+            - "linux/arm64"

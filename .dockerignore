@@ -1,0 +1,24 @@
+# Node modules (platform-specific binaries)
+**/node_modules
+
+# Gradle caches (platform-specific)
+**/.gradle
+
+# Build outputs
+**/build
+**/target
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+*.iml
+
+# Documentation
+*.md
+LICENSE
+
+# Test files
+**/e2e-playwright
