@@ -7,7 +7,7 @@ steps:
       - ssh://git@git.realestate.com.au/buildkite-plugin/ecr-release-buildkite-plugin#v1.5.1:
           dockerfile-path: "Dockerfile"  # Put multi-stage Dockerfile at repo root
           namespace: "data-platform"
-          repository: "kafka-ui"
+          repository: "kafka-ui-spike"
           tags: "$BUILDKITE_BUILD_NUMBER"
           lifecycle_policy:
             retain_tagged_image_count: 100
