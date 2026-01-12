@@ -1,11 +1,15 @@
 package io.kafbat.ui.config.auth;
 
+import java.io.Serial;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class RbacLdapUser implements UserDetails, RbacUser {
+
+  @Serial
+  private static final long serialVersionUID = 1L;
 
   private final UserDetails userDetails;
 
